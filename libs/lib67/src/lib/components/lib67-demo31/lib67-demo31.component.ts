@@ -1,0 +1,9 @@
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+
+@Component({
+  selector: 'nx-lib67-demo31',
+  templateUrl: './lib67-demo31.component.html',
+  styleUrl: './lib67-demo31.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+})
+export class Lib67Demo31Component {}
