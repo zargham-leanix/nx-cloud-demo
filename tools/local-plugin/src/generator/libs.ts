@@ -6,13 +6,11 @@ import {
 import { formatFiles, Tree } from '@nx/devkit';
 
 export async function libsGenerator(tree: Tree) {
-  const libs = Array<number>(2)
-    .fill(0)
-    .map((_, index) => index + 1);
+  const libs = [...genNum(1, 100)];
 
-  for (const lib of libs) {
-    await generateLib(tree, lib);
-  }
+  // for (const lib of libs) {
+  //   await generateLib(tree, lib);
+  // }
 
   tree.write(
     'apps/nx-cloud-demo/src/app/app.component.ts',
@@ -38,8 +36,9 @@ async function generateLib(tree: Tree, index: number) {
     style: 'scss',
   });
 
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 50; i++) {
     const cmpName = `${name}-demo${i}`;
+    console.log(cmpName);
     await componentGenerator(tree, {
       path: `libs/${name}/src/lib/components/${cmpName}/${cmpName}`,
       name: cmpName,
@@ -74,4 +73,7 @@ export class AppComponent {
   title = 'nx-cloud-demo';
 }
 `;
+}
+function* genNum(from: number, to: number) {
+  for (let i = from; i <= to; i++) yield i;
 }
