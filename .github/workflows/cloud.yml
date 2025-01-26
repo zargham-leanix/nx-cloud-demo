@@ -33,7 +33,7 @@ jobs:
       # Run this command as early as possible, before dependencies are installed
       # Learn more at https://nx.dev/ci/reference/nx-cloud-cli#npx-nxcloud-startcirun
       # Uncomment this line to enable task distribution
-      - run: npx nx-cloud start-ci-run --with-env-vars="NODE_OPTIONS" --distribute-on="3 linux-large-js" --stop-agents-after="lint,test,build"
+      - run: npx nx-cloud start-ci-run --with-env-vars="NODE_OPTIONS" --distribute-on="10 linux-large-js" --stop-agents-after="lint,test,build"
 
       - run: npm ci --legacy-peer-deps
 
