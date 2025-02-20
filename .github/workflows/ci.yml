@@ -10,8 +10,8 @@ permissions:
   actions: read
   contents: read
 
-# env:
-# NODE_OPTIONS: --max_old_space_size=6000
+env:
+  NODE_OPTIONS: --max_old_space_size=6000
 
 jobs:
   lint:
@@ -93,4 +93,4 @@ jobs:
       # Prepend any command with "nx-cloud record --" to record its logs to Nx Cloud
       # - run: npx nx-cloud record -- echo Hello World
       # Nx Affected runs only tasks affected by the changes in this PR/commit. Learn more: https://nx.dev/ci/features/affected
-      - run: npx nx build app-2
+      - run: npx nx build nx-cloud-demo
