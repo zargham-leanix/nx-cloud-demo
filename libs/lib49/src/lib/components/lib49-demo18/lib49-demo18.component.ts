@@ -1,9 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'nx-lib49-demo18',
-  templateUrl: './lib49-demo18.component.html',
-  styleUrl: './lib49-demo18.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'nx-lib49-demo18',
+    templateUrl: './lib49-demo18.component.html',
+    styleUrl: './lib49-demo18.component.css',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class Lib49Demo18Component {}
