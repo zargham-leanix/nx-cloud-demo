@@ -6,7 +6,7 @@
       "plugin": "./custom-task-runner/index.ts"
     }
   ],
-  "random": 17,
+  "random": 505,
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
     "production": [
