@@ -1,6 +1,11 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "parallel": 1,
+  "plugins": [
+    {
+      "plugin": "./custom-task-runner/index.ts"
+    }
+  ],
   "random": 17,
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
